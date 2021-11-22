@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity
             dlg.setPositiveButton("OK", null);
             dlg.setCancelable(true);
             dlg.setMessage(s);
-            dlg.setIcon(R.drawable.Dollar);
+            dlg.setIcon(R.drawable.dollar);
             dlg.create().show();
         }
     }
