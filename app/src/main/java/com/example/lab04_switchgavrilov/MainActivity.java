@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 //393 Gavrilov Switch
 public class MainActivity extends AppCompatActivity
@@ -35,6 +36,34 @@ public class MainActivity extends AppCompatActivity
         price[1] = findViewById(R.id.carrot_Price);
         price[2] = findViewById(R.id.tomato_Price);
         price[3] = findViewById(R.id.potato_Price);
+    }
+
+    public void onButton_Click(View v)
+    {
+        int count = 0;
+        float sum = 0, cost = 0;
+        String s = "";
+
+        for (int i = 0; i < 4; i++)
+        {
+            if (chk[i].isChecked())
+            {
+                try
+                {
+                    count = Integer.parseInt(amount[i].getText().toString());
+                    cost = Integer.parseInt(price[i].getText().toString());
+                }
+                catch (Exception ex)
+                {
+                    Toast.makeText(this, String.format("Empty or incorrect values in %s", chk[i].getText().toString()), Toast.LENGTH_SHORT);
+                    return;
+                }
+                s += chk[i].getText().toString() + "Cost = " + cost + "/n";
+                sum += count * cost;
+            }
+        }
+
+        Toast.makeText(this, s, Toast.LENGTH_SHORT);
     }
 
     public void onCheckBox_Click(View v)

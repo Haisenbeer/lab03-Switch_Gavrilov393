@@ -19,7 +19,6 @@
             android:id="@+id/t_AppCreator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="top"
             android:text="@string/app_creator"
             android:textAlignment="center"
             android:textColor="#000000"
@@ -214,6 +213,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="onButton_Click"
                 android:text="@string/Button_calculate" />
         </LinearLayout>
 
