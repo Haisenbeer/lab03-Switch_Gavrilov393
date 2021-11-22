@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity
     {
         Toast toast;
         int count = 0;
-        float sum = 0, allSum = 0, cost = 0;
+        float sum = 0, cost = 0;
         String s = "";
 
         for (int i = 0; i < 4; i++)
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity
                 try
                 {
                     count = Integer.parseInt(amount[i].getText().toString());
-                    cost = Integer.parseInt(price[i].getText().toString());
+                    cost = Float.parseFloat(price[i].getText().toString());
                 }
                 catch (Exception ex)
                 {
