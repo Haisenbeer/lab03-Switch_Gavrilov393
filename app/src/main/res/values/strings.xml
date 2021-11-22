@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">lab04-Switch Gavrilov</string>
+    <string name="app_creator">393 Gavrilov Switch</string>
+    <string name="Name_products">Name</string>
+    <string name="Price_products">Price</string>
+    <string name="Amount_products">Amount</string>
+    <string name="Product_apple">Apple</string>
+    <string name="Product_potato">Potato</string>
+    <string name="Product_carrot">Carrot</string>
+    <string name="Product_tomato">Tomato</string>
+    <string name="Button_calculate">Calculate</string>
+</resources>
