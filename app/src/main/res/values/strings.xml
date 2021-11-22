@@ -9,4 +9,6 @@
     <string name="Product_carrot">Carrot</string>
     <string name="Product_tomato">Tomato</string>
     <string name="Button_calculate">Calculate</string>
+    <string name="RadioButton_MessageBox">MessageBox</string>
+    <string name="RadioButton_Toast">Toast</string>
 </resources>

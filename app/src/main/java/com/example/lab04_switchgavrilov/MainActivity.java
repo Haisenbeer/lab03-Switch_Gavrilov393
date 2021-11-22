@@ -1,5 +1,6 @@
 package com.example.lab04_switchgavrilov;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.opengl.Visibility;
@@ -7,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 //393 Gavrilov Switch
@@ -15,6 +17,8 @@ public class MainActivity extends AppCompatActivity
     CheckBox chk[] = new CheckBox[4];
     EditText amount[] = new EditText[4];
     EditText price[] = new EditText[4];
+    RadioButton rbMessageBox, rbToast;
+    AlertDialog.Builder dlg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -36,12 +40,16 @@ public class MainActivity extends AppCompatActivity
         price[1] = findViewById(R.id.carrot_Price);
         price[2] = findViewById(R.id.tomato_Price);
         price[3] = findViewById(R.id.potato_Price);
+
+        rbMessageBox = findViewById(R.id.radioButton_MessageBox);
+        rbToast = findViewById(R.id.radioButton_Toast);
     }
 
     public void onButton_Click(View v)
     {
+        Toast toast;
         int count = 0;
-        float sum = 0, cost = 0;
+        float sum = 0, allSum = 0, cost = 0;
         String s = "";
 
         for (int i = 0; i < 4; i++)
@@ -55,15 +63,32 @@ public class MainActivity extends AppCompatActivity
                 }
                 catch (Exception ex)
                 {
-                    Toast.makeText(this, String.format("Empty or incorrect values in %s", chk[i].getText().toString()), Toast.LENGTH_SHORT);
+                    toast = Toast.makeText(this, String.format("Empty or incorrect values in %s", chk[i].getText().toString()), Toast.LENGTH_SHORT);
+                    toast.show();
                     return;
                 }
-                s += chk[i].getText().toString() + "Cost = " + cost + "/n";
+
+                s += chk[i].getText().toString() + "Cost = " + count * cost + "\n";
                 sum += count * cost;
             }
         }
 
-        Toast.makeText(this, s, Toast.LENGTH_SHORT);
+        s += "Total cost = " + sum;
+        if(rbToast.isChecked())
+        {
+            toast = Toast.makeText(this, s, Toast.LENGTH_SHORT);
+            toast.show();
+        }
+        else
+        {
+            dlg  = new AlertDialog.Builder(this);
+            dlg.setTitle("Cost");
+            dlg.setPositiveButton("OK", null);
+            dlg.setCancelable(true);
+            dlg.setMessage(s);
+            dlg.setIcon(R.drawable.Dollar);
+            dlg.create().show();
+        }
     }
 
     public void onCheckBox_Click(View v)
