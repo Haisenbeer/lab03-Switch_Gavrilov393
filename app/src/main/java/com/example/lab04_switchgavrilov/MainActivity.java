@@ -73,49 +73,49 @@ public class MainActivity extends AppCompatActivity
             case "1":
                 if (chk[0].isChecked())
                 {
-                    amount[0].setVisibility(View.INVISIBLE);
-                    price[0].setVisibility(View.INVISIBLE);
+                    amount[0].setVisibility(View.VISIBLE);
+                    price[0].setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    amount[0].setVisibility(View.VISIBLE);
-                    price[0].setVisibility(View.VISIBLE);
+                    amount[0].setVisibility(View.INVISIBLE);
+                    price[0].setVisibility(View.INVISIBLE);
                 }
                 break;
             case "2":
                 if (chk[1].isChecked())
                 {
-                    amount[1].setVisibility(View.INVISIBLE);
-                    price[1].setVisibility(View.INVISIBLE);
+                    amount[1].setVisibility(View.VISIBLE);
+                    price[1].setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    amount[1].setVisibility(View.VISIBLE);
-                    price[1].setVisibility(View.VISIBLE);
+                    amount[1].setVisibility(View.INVISIBLE);
+                    price[1].setVisibility(View.INVISIBLE);
                 }
                 break;
             case "3":
                 if (chk[2].isChecked())
                 {
-                    amount[2].setVisibility(View.INVISIBLE);
-                    price[2].setVisibility(View.INVISIBLE);
+                    amount[2].setVisibility(View.VISIBLE);
+                    price[2].setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    amount[2].setVisibility(View.VISIBLE);
-                    price[2].setVisibility(View.VISIBLE);
+                    amount[2].setVisibility(View.INVISIBLE);
+                    price[2].setVisibility(View.INVISIBLE);
                 }
                 break;
             case "4":
                 if (chk[3].isChecked())
                 {
-                    amount[3].setVisibility(View.INVISIBLE);
-                    price[3].setVisibility(View.INVISIBLE);
+                    amount[3].setVisibility(View.VISIBLE);
+                    price[3].setVisibility(View.VISIBLE);
                 }
                 else
                 {
-                    amount[3].setVisibility(View.VISIBLE);
-                    price[3].setVisibility(View.VISIBLE);
+                    amount[3].setVisibility(View.INVISIBLE);
+                    price[3].setVisibility(View.INVISIBLE);
                 }
                 break;
         }
